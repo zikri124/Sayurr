@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ tools:context=".CartFragment">
+
+ <TextView
+  android:id="@+id/textHai2"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="32dp"
+  android:fontFamily="@font/poppins"
+  android:text="Keranjang Belanja"
+  android:textColor="@color/black"
+  android:textSize="24sp"
+  android:textStyle="bold"
+  app:layout_constraintEnd_toStartOf="@+id/guideline2"
+  app:layout_constraintStart_toStartOf="@+id/guideline3"
+  app:layout_constraintTop_toTopOf="parent"
+  tools:ignore="HardcodedText" />
+
+ <androidx.constraintlayout.widget.Guideline
+  android:id="@+id/guideline2"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  app:layout_constraintGuide_percent="0.95" />
+
+ <androidx.constraintlayout.widget.Guideline
+  android:id="@+id/guideline3"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  app:layout_constraintGuide_percent="0.05" />
+
+ <androidx.recyclerview.widget.RecyclerView
+  android:id="@+id/recycleViewCart"
+  android:layout_width="0dp"
+  android:layout_height="0dp"
+  android:layout_marginTop="32dp"
+  android:layout_marginBottom="8dp"
+  app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+  app:layout_constraintEnd_toStartOf="@+id/guideline2"
+  app:layout_constraintStart_toStartOf="@+id/guideline3"
+  app:layout_constraintTop_toBottomOf="@+id/textHai2"
+  tools:listitem="@layout/item_on_cart" />
+
+ <LinearLayout
+  android:id="@+id/linearLayout"
+  android:layout_width="0dp"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="8dp"
+  android:baselineAligned="false"
+  android:orientation="horizontal"
+  app:layout_constraintBottom_toBottomOf="parent"
+  app:layout_constraintEnd_toStartOf="@+id/guideline2"
+  app:layout_constraintHorizontal_bias="0.0"
+  app:layout_constraintStart_toStartOf="@+id/guideline3">
+
+  <LinearLayout
+   android:layout_width="wrap_content"
+   android:layout_height="match_parent"
+   android:layout_weight="1"
+   android:orientation="vertical">
+
+   <TextView
+    android:id="@+id/textCat2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/poppins"
+    android:text="Total Harga"
+    android:textColor="@color/black"
+    android:textSize="14sp" />
+
+   <TextView
+    android:id="@+id/textTotalPrice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/poppins_bold"
+    android:text="Rp0"
+    android:textColor="@color/Primary"
+    android:textSize="20sp" />
+  </LinearLayout>
+
+  <Button
+   android:id="@+id/btnCheckout"
+   style="?android:attr/borderlessButtonStyle"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_marginStart="8dp"
+   android:layout_marginBottom="4dp"
+   android:layout_weight="1"
+   android:background="@drawable/ripple_effect"
+   android:backgroundTint="@color/Primary"
+   android:fontFamily="@font/poppins"
+   android:text="CheckOut "
+   android:textAllCaps="false"
+   android:textColor="#FFFFFF"
+   android:translationZ="-2dp" />
+ </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
